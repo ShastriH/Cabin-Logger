@@ -1,0 +1,604 @@
+/*
+ Author: Shastri Harrinanan
+ Version: 0.1.2.6
+ Revision #014
+ Date Revised: 20/03/2015
+
+ Table of Contents:
+ 
+ Style Section					Line Number
+
+ Global Styles						---
+ Page Header						---
+ Main Navigation Menu				---
+ Main Content						---
+ 	index.html						---
+ Page Footer						---
+ 	Footer Links					---
+	Social Media					---
+	Website Copyright				---
+ 
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Web Fonts */
+/* Open Sans (normal + extra bold) */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(../fonts/OpenSans400.woff) format("woff");
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url(../fonts/OpenSans800.woff) format("woff");
+}
+/* Montserrat (normal) */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat-Regular"), url(../fonts/Montserrat.woff) format("woff");
+}
+/* FontAwesome (normal) */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.2.0");
+  src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Global Styles
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Site-wide CSS Reset */
+h1, h2, h3 {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* The styling for the entire viewport */
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #f7f7f7;
+  color: black;
+  font-family: 'Open Sans', Arial, Helvetica, Georgia, Tahoma, sans-serif;
+  margin: 0;
+}
+body a {
+  transition: color 0.5s;
+}
+
+/* Site-wide Rules */
+.btn {
+  background-color: #18b97b;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 2em;
+  margin-right: 10px;
+  outline: none;
+  padding: 0 1em;
+  text-align: center;
+  text-decoration: none;
+}
+.btn:hover, .btn:focus {
+  background-color: #f37d68;
+  color: #f9cb90;
+}
+.btn:active {
+  background-color: #5e5e5e;
+}
+
+/* Remove Firefox's outline on the button when it is clicked */
+::-moz-focus-inner {
+  border: none;
+}
+
+/* Remove the outline for all links when they have focus */
+/* Note: To retain accessibility, the hover styling for all links will be applied to the focus state */
+:focus {
+  outline: none;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Page Header
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#pageHeader {
+  background-color: white;
+  height: 82px;
+  margin: 2px auto 0;
+  padding: 0 18.75%;
+  width: 62.5%;
+}
+#pageHeader span {
+  color: black;
+  float: left;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+/* Main Navigation Menu
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* CSS code used to make the list horizontal, remove the list style, and add colour */
+/* General style the nav element */
+nav {
+  float: right;
+  height: 40px;
+}
+nav ul, nav li {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul {
+  width: 100%;
+}
+nav li {
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  width: auto;
+}
+nav li:last-of-type {
+  padding: 0;
+}
+nav a {
+  display: block;
+  font-size: 0.8em;
+  /* Match the height of the menu to vertically centre the text */
+  line-height: 40px;
+  text-decoration: none;
+}
+nav a:link, nav a:visited {
+  color: black;
+}
+nav a:hover, nav a:focus {
+  color: #ff8000;
+}
+nav a:active {
+  color: black;
+}
+
+/* Breadcrumbs */
+#breadcrumbs {
+  border-top: 2px solid black;
+  height: 40px;
+  padding-top: 1px;
+  position: absolute;
+  top: 40px;
+  width: 62.5%;
+}
+#breadcrumbs ul, #breadcrumbs li {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#breadcrumbs ul {
+  width: 100%;
+}
+#breadcrumbs li {
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  width: auto;
+}
+#breadcrumbs li:last-of-type {
+  padding: 0;
+}
+#breadcrumbs li.search {
+  float: right;
+}
+#breadcrumbs form {
+  padding-top: 6px;
+}
+#breadcrumbs form .btn {
+  font-family: 'Montserrat-Regular', Arial, Helvetica, Georgia, Tahoma, sans-serif;
+  font-size: 0.9em;
+  line-height: 22px;
+  margin-left: 10px;
+}
+
+/* Main Content
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* The sitewide main content rules */
+main {
+  background-color: #f7f7f7;
+  color: black;
+  font-size: 100%;
+  margin: 0 auto 20px;
+  padding-top: 25px;
+  width: 62.5%;
+}
+main article {
+  padding: 0 5%;
+  width: 90%;
+}
+main article:first-of-type {
+  margin-top: 50px;
+}
+main article a[href*=".php"] {
+  color: #f37d68;
+  font-weight: bold;
+  text-decoration: none;
+}
+main article a[href*=".php"]:hover, main article a[href*=".php"]:focus {
+  color: #ffb366;
+}
+main article h2 a[href*=".php?a="] {
+  color: inherit;
+}
+main article h2 a[href*=".php?a="]:hover, main article a[href*=".php?a="]:focus {
+  color: inherit;
+  text-decoration: underline;
+}
+
+section h1 {
+  border-bottom: 1px solid black;
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: -1px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 36px;
+}
+
+section h3 {
+  font-size: 28px;
+}
+
+.articleInfo {
+  margin-bottom: 25px;
+}
+.articleInfo time, .articleInfo span {
+  padding-right: 20px;
+}
+.articleInfo time:last-child, .articleInfo span:last-child {
+  padding: 0;
+}
+.articleInfo time a, .articleInfo span a {
+  font-size: 0.8em;
+}
+
+.postDate:before {
+  content: "\f017";
+  font-family: FontAwesome, sans-serif;
+  padding-right: 5px;
+}
+
+.category:before {
+  content: "\f07c";
+  font-family: FontAwesome, sans-serif;
+  padding-right: 5px;
+}
+
+.tag:before {
+  content: "\f02b";
+  font-family: FontAwesome, sans-serif;
+  padding-right: 5px;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+article {
+  margin-bottom: 50px;
+}
+article table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+article table th {
+  font-size: 1.1em;
+  text-align: left;
+}
+article th, article td {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+article tr td:last-of-type {
+  text-align: center;
+}
+
+/* The page-specific styling for the sections containing the unique content on each page */
+/* index.php
+--------------------------------------------------*/
+#boxMenu {
+  display: none;
+  margin: 0 0 50px -3px;
+  width: 100%;
+  *zoom: 1;
+}
+#boxMenu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#boxMenu h1 {
+  border: none;
+}
+#boxMenu div {
+  background: rgba(247, 247, 247, 0);
+  border: 1px solid #ffb366;
+  color: black;
+  float: left;
+  font-size: 0.9em;
+  height: 200px;
+  left: -20em;
+  margin-right: 6.25%;
+  opacity: 0;
+  padding: 0 20px;
+  position: relative;
+  transition: background 0.5s;
+  width: 25%;
+}
+#boxMenu div:first-of-type {
+  margin-left: 1.5%;
+}
+#boxMenu div:last-of-type {
+  margin-right: 0;
+}
+#boxMenu div:hover {
+  background: #f9cb90;
+  cursor: pointer;
+}
+#boxMenu div h3 {
+  line-height: 30px;
+  padding: 5px 0;
+  text-align: center;
+}
+#boxMenu div p {
+  border-top: 1px solid #f9cb90;
+  margin: 0;
+  padding-top: 10px;
+  transition: all 0.5s;
+}
+#boxMenu div:hover p {
+  border-top: 1px solid #f37d68;
+}
+
+/* aboutus.php
+--------------------------------------------------*/
+#aboutUs {
+  padding-bottom: 20px;
+}
+#aboutUs strong {
+  color: red;
+}
+
+/* search.php
+--------------------------------------------------*/
+#paginationLinks {
+  text-align: center;
+  *zoom: 1;
+}
+#paginationLinks:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#paginationLinks ul, #paginationLinks li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#paginationLinks li {
+  display: inline;
+  font-size: 0.8em;
+  /* Match the height of the menu to vertically centre the text */
+  line-height: 40px;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  width: auto;
+}
+#paginationLinks li a {
+  display: inline-block;
+  text-decoration: none;
+}
+#paginationLinks li a:link, #paginationLinks li a:visited {
+  color: black;
+}
+#paginationLinks li a:hover, #paginationLinks li a:focus {
+  color: #ff8000;
+}
+#paginationLinks li a:active {
+  color: black;
+}
+#paginationLinks .btn {
+  display: inline-block;
+  height: 40px;
+  padding: 0;
+  width: 40px;
+}
+#paginationLinks .psuedoBtn {
+  background: #5e5e5e;
+  cursor: default;
+  display: inline-block;
+  font-style: oblique;
+  line-height: 40px;
+  padding: 0;
+  width: 40px;
+}
+#paginationLinks .psuedoBtn:hover, #paginationLinks .psuedoBtn:focus {
+  background-color: #5e5e5e;
+}
+#paginationLinks .psuedoBtn:active {
+  background-color: #5e5e5e;
+}
+
+/* contact.php
+--------------------------------------------------*/
+form fieldset {
+  border: none;
+  margin-bottom: 1em;
+  width: 486px;
+}
+form fieldset legend {
+  color: #fbaf2d;
+  font-family: 'Open Sans', Arial, Helvetica, Georgia, Tahoma, sans-serif;
+  font-size: 1.4em;
+}
+form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+form ul li {
+  font-size: .9em;
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0;
+}
+form ul li label.text {
+  display: block;
+}
+form ul textarea {
+  height: 125px;
+}
+
+#contactForm {
+  margin: 0 auto;
+  width: 340px;
+}
+#contactForm input:not([class='btn']), #contactForm textarea, #contactForm select {
+  border: none;
+  background: #f9e380;
+  font-size: 1em;
+  padding: .5em;
+  width: 310px;
+}
+#contactForm input:focus, #contactForm textarea:focus {
+  outline: 2px solid #a758a2;
+}
+#contactForm .btn {
+  margin-top: 20px;
+}
+
+/* Page Footer
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#pageFooter {
+  background-color: #2e3033;
+  color: white;
+  font-size: 0.8em;
+  padding: 20px 18.75% 0;
+  margin: 0 auto;
+  text-align: left;
+  width: 62.5%;
+}
+#pageFooter #footerMenus {
+  *zoom: 1;
+}
+#pageFooter #footerMenus:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#pageFooter h3 {
+  font: normal normal normal 24px Arial, Helvetica, sans-serif;
+  padding: 20px 0 20px;
+}
+#pageFooter ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+#pageFooter ul li {
+  margin: 5px 0;
+}
+#pageFooter ul li:first-of-type {
+  margin-top: -5px;
+}
+#pageFooter ul li a:link, #pageFooter ul li a:visited {
+  color: #ababab;
+}
+#pageFooter ul li a:hover, #pageFooter ul li a:focus {
+  color: white;
+}
+#pageFooter ul li a:active {
+  color: #ababab;
+}
+#pageFooter #toTop {
+  padding: 0 0 10px;
+  margin: 0 auto;
+  width: 100px;
+}
+#pageFooter #toTop a[href="#top"] {
+  color: #f37d68;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+#pageFooter #toTop a[href="#top"]:hover, #pageFooter #toTop a[href="#top"]:focus {
+  color: #f9cb90;
+}
+
+/* Styling for the footer sections */
+/* The footer links section */
+.footerBox {
+  float: left;
+  padding: 0 0 25px 5%;
+  width: 20%;
+}
+.footerBox a {
+  padding: 5px 0 10px 1px;
+  text-align: left;
+  text-decoration: none;
+}
+
+/* The copyright section */
+#copy {
+  border-top: 2px dashed #8a8a8a;
+  clear: both;
+  color: #999999;
+  font-size: 0.9em;
+  padding: 20px 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .footerBox {
+    float: none;
+  }
+}
+@media screen and (max-width: 1300px) {
+  nav {
+    position: absolute;
+    left: -10000em;
+  }
+
+  #boxMenu div {
+    float: none;
+    margin: 5px 35% 0;
+    font-size: 0.8em;
+  }
+  #boxMenu div:first-of-type {
+    margin: 5px 35% 0;
+  }
+}
+@media screen and (max-width: 1775px) {
+  #boxMenu div {
+    margin-right: 1%;
+  }
+}

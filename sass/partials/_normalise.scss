@@ -1,0 +1,9 @@
+/* Remove Firefox's outline on the button when it is clicked */
+::-moz-focus-inner {
+	border: none;
+}
+/* Remove the outline for all links when they have focus */
+/* Note: To retain accessibility, the hover styling for all links will be applied to the focus state */
+:focus {
+	outline: none;
+}

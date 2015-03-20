@@ -1,0 +1,602 @@
+/*
+ Author: Shastri Harrinanan
+ Version: 0.1.2.6
+ Revision #014
+ Date Revised: 20/03/2015
+
+ Table of Contents:
+ 
+ Style Section					Line Number
+
+ Global Styles						---
+ Page Header						---
+ Main Navigation Menu				---
+ Main Content						---
+ 	index.html						---
+ Page Footer						---
+ 	Footer Links					---
+	Social Media					---
+	Website Copyright				---
+ 
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@import "compass/css3";
+@import "compass/utilities";
+@import "partials/variables";
+ 
+/* Web Fonts */
+/* Open Sans (normal + extra bold) */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/OpenSans400.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(../fonts/OpenSans800.woff) format('woff');
+}
+/* Montserrat (normal) */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(../fonts/Montserrat.woff) format('woff');
+}
+/* FontAwesome (normal) */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?v=4.2.0');
+  src: url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../fonts/fontawesome/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Global Styles
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Site-wide CSS Reset */
+h1, h2, h3 {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+	padding: 0;
+}
+
+/* The styling for the entire viewport */
+html {
+	font-size: 100%;    
+}
+body {
+    background-color: $pageBG;
+	color: hsl(0, 0%, 0%);
+	font-family: 'Open Sans', Arial, Helvetica, Georgia, Tahoma, sans-serif;
+    margin: 0;
+    & a {
+        transition: color 0.5s;
+    }
+}
+
+/* Site-wide Rules */
+.btn {
+	background-color: $themeGreen;
+	border: none;
+	color: hsl(0, 0%, 100%);
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 2em;
+	margin-right: 10px;	
+	outline: none;
+	padding: 0 1em;
+	text-align: center;
+	text-decoration: none;
+    &:hover,
+    &:focus {
+        background-color: $themeRed;
+        color: $themeOrange;
+    }
+    &:active {
+        background-color: $themeLightGrey;
+    }
+}
+@import "partials/normalise";
+.clear {
+	clear: both;
+}
+
+
+/* Page Header
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#pageHeader {
+    background-color: hsl(0, 0, 100%);
+	height: $myHeaderHeight;
+    margin: 2px auto 0;
+    padding: 0 $myCenteringPadding;
+    width: $myTotalWidth;
+    & span {
+        color: hsl(0, 0%, 0%);
+        float: left;
+        font-family: Montserrat, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 40px;
+    }
+}
+
+
+/* Main Navigation Menu
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* CSS code used to make the list horizontal, remove the list style, and add colour */
+/* General style the nav element */
+nav {
+    float: right;
+	height: 40px;
+    & ul,
+    & li
+    {
+        float: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    & ul {
+        width: 100%;
+    }
+    & li {
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        width: auto;
+        &:last-of-type {
+            padding: 0;
+        }
+    }
+    & a {
+        display: block;
+        font-size: 0.8em;
+        /* Match the height of the menu to vertically centre the text */	
+        line-height: 40px;
+        text-decoration: none;
+        &:link,
+        &:visited {
+            color: hsl(0, 0%, 0%);
+        }
+        &:hover,
+        &:focus {
+            color: hsl(30, 100%, 50%);
+        }
+        &:active {
+            color: hsl(0, 0%, 0%);
+        }
+    }
+}
+
+/* Breadcrumbs */
+
+#breadcrumbs {
+    border-top: 2px solid hsl(0, 0%, 0%);
+    height: 40px;
+    padding-top: 1px;
+    position: absolute;
+    top: 40px;
+    width: 62.5%;
+    & ul,
+    & li
+    {
+        float: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    & ul {
+        width: 100%;
+    }
+    & li {
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        width: auto;
+        &:last-of-type {
+            padding: 0;
+        }
+        &.search {
+            float: right;
+        }
+    }
+    & form {
+        // display: none;
+        padding-top: 6px;
+        & .btn {
+            font-family: 'Montserrat-Regular', Arial, Helvetica, Georgia, Tahoma, sans-serif;
+            font-size: 0.9em;
+            line-height: 22px;
+            margin-left: 10px;
+        }
+    }
+}
+
+
+/* Main Content
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* The sitewide main content rules */
+main {
+	background-color: $pageBG;
+	color: hsl(0, 0%, 0%);
+	font-size: 100%;
+    margin: 0 auto 20px;
+    padding-top: 25px;
+    width: $myTotalWidth;
+    & article {
+        padding: 0 5%;
+        width: 90%;
+        &:first-of-type {
+            margin-top: 50px;
+        }
+        & a[href*=".php"] {
+            color: $themeRed;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        & a[href*=".php"]:hover,
+        & a[href*=".php"]:focus {
+            color: hsl(30, 100%, 70%);
+        }
+        & h2 a[href*=".php?a="] {
+            color: inherit;
+        }
+        & h2 a[href*=".php?a="]:hover,
+        & a[href*=".php?a="]:focus {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+}
+section h1 {
+    border-bottom: 1px solid hsl(0, 0%, 0%);
+	font-size: 48px;
+	font-weight: normal;
+	letter-spacing: -1px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+section h2 {
+    font-size: 36px;
+}
+section h3 {
+    font-size: 28px;
+}
+.articleInfo {
+    margin-bottom: 25px;
+    & time,
+    & span {
+        padding-right: 20px;
+        &:last-child {
+            padding: 0;
+        }
+        & a {
+            font-size: 0.8em;
+        }
+    }
+}
+.postDate:before {
+    content: "\f017";
+    font-family: FontAwesome, sans-serif;
+    padding-right: 5px;
+}
+.category:before {
+    content: "\f07c";
+    font-family: FontAwesome, sans-serif;
+    padding-right: 5px;
+}
+.tag:before {
+    content: "\f02b";
+    font-family: FontAwesome, sans-serif;
+    padding-right: 5px;
+}
+figure {
+    text-align: center;
+}
+figcaption {
+    font-size: 0.9em;
+    font-weight: bold;
+}
+article {
+    margin-bottom: 50px;
+    & table {
+        border: 1px solid hsl(0, 0%, 0%);
+        border-collapse: collapse;
+        margin: 20px 0;
+        & th {
+            font-size: 1.1em;
+            text-align: left;
+        }
+    }
+    & th,
+    & td {
+        border: 1px solid hsl(0, 0%, 0%);
+        padding: 10px 20px;
+    }
+    & tr td:last-of-type {
+        text-align: center;
+    }
+}
+
+/* The page-specific styling for the sections containing the unique content on each page */
+/* index.php
+--------------------------------------------------*/
+#boxMenu {
+    display: none;
+    margin: 0 0 50px -3px;
+    width: 100%;
+    @include pie-clearfix;
+    & h1 {
+        border: none;
+    }
+    & div {
+        background: transparentize($pageBG, 1);
+        border: 1px solid $Orange;
+        color: hsl(0, 0%, 0%);
+        float: left;
+        font-size: 0.9em;
+        height: 200px;
+        left: -20em;
+        margin-right: 6.25%;
+        opacity: 0;
+        padding: 0 20px;
+        position: relative;
+        transition: background 0.5s;
+        width: 25%;
+        &:first-of-type {
+            margin-left: 1.5%;
+        }
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            background: $themeOrange;
+            cursor: pointer;
+        }
+        & h3 {
+            line-height: 30px;
+            padding: 5px 0;
+            text-align: center;
+        }
+        & p {
+            border-top: 1px solid $themeOrange;
+            margin: 0;
+            padding-top: 10px;
+            transition: all 0.5s;
+        }
+        &:hover p {
+            border-top: 1px solid $themeRed;
+        }
+    }
+}
+
+/* aboutus.php
+--------------------------------------------------*/
+
+#aboutUs {
+    padding-bottom: 20px;
+    & strong {
+      color: hsl(0, 100%, 50%);
+    }
+}
+
+/* search.php
+--------------------------------------------------*/
+#paginationLinks {
+    text-align: center;
+    @include pie-clearfix;
+    & ul,
+    & li
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    & li {
+        display: inline;
+        font-size: 0.8em;
+        /* Match the height of the menu to vertically centre the text */
+        line-height: 40px;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        width: auto;
+        & a {
+            display: inline-block;
+            text-decoration: none;
+            &:link,
+            &:visited {
+                color: hsl(0, 0%, 0%);
+            }
+            &:hover,
+            &:focus {
+                color: hsl(30, 100%, 50%);
+            }
+            &:active {
+                color: hsl(0, 0%, 0%);
+            }
+        }
+    }
+    & .btn {
+        display: inline-block;
+        height: 40px;
+        padding: 0;
+        width: 40px;
+    }
+    & .psuedoBtn {
+        background: $themeLightGrey;
+        cursor: default;
+        display: inline-block;
+        font-style: oblique;
+        line-height: 40px;
+        padding: 0;
+        width: 40px;
+        &:hover,
+        &:focus {
+            background-color: $themeLightGrey;
+        }
+        &:active {
+            background-color: $themeLightGrey;
+        }
+    }
+}
+
+/* contact.php
+--------------------------------------------------*/
+form {
+    fieldset {
+        border: none;
+        margin-bottom: 1em;
+        width: 486px;
+        & legend {
+            color: hsl(38, 96, 58);
+            font-family: 'Open Sans', Arial, Helvetica, Georgia, Tahoma, sans-serif;
+            font-size: 1.4em;
+        }
+    }
+	& ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        & li {
+            font-size: .9em;
+            margin: 0;
+            margin-bottom: 1em;
+            padding: 0;
+            & label.text {
+                display: block;
+            } 
+        }
+        & textarea {
+            height: 125px;
+        }
+    }
+}
+
+#contactForm {
+    margin: 0 auto;
+    width: 340px;
+    & input:not([class='btn']),
+    & textarea,
+    & select {
+        border: none;
+        background: hsl(49, 91, 74);
+        font-size: 1em;
+        padding: .5em;
+        width: 310px;
+    }
+    & input:focus, textarea:focus {
+        outline: 2px solid hsl(304, 31, 50);
+    }
+    & .btn {
+        margin-top: 20px;
+    }
+}
+
+
+/* Page Footer
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#pageFooter {
+	background-color: $footerBG;
+	color: hsl(0, 0%, 100%);
+    font-size: 0.8em;
+	padding: 20px $myCenteringPadding 0;
+    margin: 0 auto;
+    text-align: left;
+    width: $myTotalWidth;
+    & #footerMenus {
+        @include pie-clearfix;
+    }
+    & h3 {
+        font: normal normal normal 24px Arial, Helvetica, sans-serif;
+        padding: 20px 0 20px;
+    }
+    & ul {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+        & li {
+            margin: 5px 0;
+            &:first-of-type {
+                margin-top: -5px;
+            }
+            & a:link,
+            & a:visited {
+                color: hsl(0, 0%, 67%);
+            }
+            & a:hover,
+            & a:focus {
+                color: hsl(0, 0%, 100%);
+            }
+            & a:active {
+                color: hsl(0, 0%, 67%);
+            }
+        }
+    }
+    & #toTop {      
+        padding: 0 0 10px;
+        margin: 0 auto;
+        width: 100px;
+        & a[href="#top"] {
+            color: $themeRed;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                color: $themeOrange;
+            }
+        }
+    }
+}
+
+/* Styling for the footer sections */
+/* The footer links section */
+.footerBox {
+	float: left;
+	padding: 0 0 25px 5%;
+	width: 20%;
+    & a {
+        padding: 5px 0 10px 1px;
+        text-align: left;
+        text-decoration: none;
+    }
+}
+
+/* The copyright section */
+#copy {
+    border-top: 2px dashed lighten($themeDarkGrey, 20%);
+	clear: both;
+    color: hsl(0, 0%, 60%);
+    font-size: 0.9em;
+	padding: 20px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .footerBox {
+        float: none;
+    }
+}
+@media screen and (max-width: 1300px) {
+    nav {
+        position: absolute;
+        left: -10000em;
+    }
+    #boxMenu div {
+        float: none;
+        margin: 5px 35% 0;
+        font-size: 0.8em;
+        &:first-of-type {
+            margin: 5px 35% 0;
+        }
+    }
+}
+@media screen and (max-width: 1775px) {
+    #boxMenu div {
+        margin-right: 1%;
+    }
+}
