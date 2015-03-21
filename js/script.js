@@ -42,7 +42,6 @@ $(function () {
     eventHandling();
     boxMenuSlider();
     toTop();
-    $("main").on("onclick", function(evt){$("main").text("Hello")});
     
     // Manually remove focus from a button when it is clicked
     $(".btn").mouseup(function(){
