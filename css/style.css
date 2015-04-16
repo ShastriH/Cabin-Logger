@@ -27,6 +27,9 @@ h1, h2, h3 {
   margin: 0;
   padding: 0; }
 
+main {
+  display: block; }
+
 /* The styling for the entire viewport */
 html {
   font-size: 100%; }
